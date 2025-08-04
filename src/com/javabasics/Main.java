@@ -1,5 +1,7 @@
 package com.javabasics;
 
+import exceptions.ExceptionDemo;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Java Inheritance!");
@@ -47,6 +49,13 @@ public class Main {
         var calculator  = new TaxCalculator2024(100_000);
         var report = new TaxReport(calculator);
         report.show();
+
+        ExceptionDemo exceptionDemo = new ExceptionDemo();
+        try {
+        exceptionDemo.show();
+        }catch (Exception e){
+            System.out.println(e);
+        }
 
     }
 
