@@ -54,7 +54,7 @@ public class Main {
         try {
         exceptionDemo.show();
         }catch (Exception e){
-            System.out.println(e);
+             e.printStackTrace();
         }
 
     }

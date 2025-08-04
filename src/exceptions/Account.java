@@ -8,9 +8,9 @@ public class Account {
         System.out.println("Amount Deposited Successfully: " + amount);
     }
 
-    public void withdraw(float value) throws InsufficiantFundException {
+    public void withdraw(float value) throws AccountExceptions {
         if(value > balance)
-            throw new InsufficiantFundException();
+            throw new AccountExceptions( new InsufficiantFundException());
         balance-=value;
         System.out.println("Withdrwan "+ value + "Amount left in account:  "+ balance );
 

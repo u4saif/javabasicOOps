@@ -48,7 +48,7 @@ public class ExceptionDemo{
         try {
             acc.deposit(230.3F);
             acc.setBalance(10);
-            acc.withdraw(1);
+            acc.withdraw(11);
             acc.deposit(-230.3F);
         } catch (Throwable e){
             System.out.println("Logging");
