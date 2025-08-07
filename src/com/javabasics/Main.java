@@ -1,6 +1,10 @@
 package com.javabasics;
 
-import exceptions.ExceptionDemo;
+import com.javabasics.exceptions.ExceptionDemo;
+import com.javabasics.generics.GenericList;
+import com.javabasics.generics.List;
+import com.javabasics.generics.User;
+import com.javabasics.generics.UserList;
 
 public class Main {
     public static void main(String[] args) {
@@ -54,9 +58,18 @@ public class Main {
         try {
         exceptionDemo.show();
         }catch (Exception e){
-             e.printStackTrace();
+//             e.printStackTrace();
         }
 
+        UserList numberList = new UserList();
+        numberList.add('6');
+        numberList.add("sd");
+        Object value = numberList.getItem(1);
+        System.out.println("Item at index 1:-> " + value.toString());
+
+        GenericList<String> numberitems = new GenericList<>();
+        numberitems.add("22");
+        System.out.println(numberitems.getValue(0));
     }
 
     //Upcasting Down-casting

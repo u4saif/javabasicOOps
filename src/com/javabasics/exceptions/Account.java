@@ -1,4 +1,4 @@
-package exceptions;
+package com.javabasics.exceptions;
 
 public class Account {
     private  float balance;
