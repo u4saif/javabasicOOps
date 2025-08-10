@@ -1,5 +1,6 @@
 package com.javabasics;
 
+import com.javabasics.collection.CollectionDemo;
 import com.javabasics.exceptions.ExceptionDemo;
 import com.javabasics.generics.GenericList;
 import com.javabasics.generics.List;
@@ -80,6 +81,10 @@ public class Main {
             System.out.println(mylistIteraor.next());
         }
 //        System.out.println(mylist.getValue(0));
+
+        var cexample = new CollectionDemo();
+        cexample.show();
+
     }
 
     //Upcasting Down-casting
