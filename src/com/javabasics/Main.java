@@ -8,9 +8,7 @@ import com.javabasics.generics.GenericList;
 import com.javabasics.generics.User;
 import com.javabasics.generics.UserList;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -100,6 +98,16 @@ public class Main {
         System.out.println(clist);
         Collections.sort(clist, new EmailComparator());
         System.out.println("AfterSort "+clist);
+
+
+        Queue<String> queExp = new ArrayDeque<>();
+        queExp.add("saif");
+        queExp.add("ayat");
+        queExp.add("xebia");
+        var front = queExp.peek();
+        var frontX = queExp.element();
+
+        System.out.println(front);
     }
 
     //Upcasting Down-casting
