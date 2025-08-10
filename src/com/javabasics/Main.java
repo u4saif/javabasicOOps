@@ -70,6 +70,16 @@ public class Main {
         GenericList<String> numberitems = new GenericList<>();
         numberitems.add("22");
         System.out.println(numberitems.getValue(0));
+
+
+        var mylist = new GenericList<String>();
+        var mylistIteraor = mylist.iterator();
+        mylist.add("aa");
+        mylist.add("bb");
+        while (mylistIteraor.hasNext()){
+            System.out.println(mylistIteraor.next());
+        }
+//        System.out.println(mylist.getValue(0));
     }
 
     //Upcasting Down-casting
