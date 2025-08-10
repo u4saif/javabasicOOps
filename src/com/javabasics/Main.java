@@ -1,11 +1,16 @@
 package com.javabasics;
 
 import com.javabasics.collection.CollectionDemo;
+import com.javabasics.collection.Customer;
+import com.javabasics.collection.EmailComparator;
 import com.javabasics.exceptions.ExceptionDemo;
 import com.javabasics.generics.GenericList;
-import com.javabasics.generics.List;
 import com.javabasics.generics.User;
 import com.javabasics.generics.UserList;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -84,7 +89,17 @@ public class Main {
 
         var cexample = new CollectionDemo();
         cexample.show();
+        var customerExample2 = new Customer("b","c2");
+        var customerExample1 = new Customer("a","b3");
+        var customerExample3 = new Customer("c","a1");
 
+        List<Customer> clist = new ArrayList<>();
+        clist.add(customerExample2);
+        clist.add(customerExample1);
+        clist.add(customerExample3);
+        System.out.println(clist);
+        Collections.sort(clist, new EmailComparator());
+        System.out.println("AfterSort "+clist);
     }
 
     //Upcasting Down-casting
