@@ -108,6 +108,15 @@ public class Main {
         var frontX = queExp.element();
 
         System.out.println(front);
+
+        Map<String,Customer> mapExp = new HashMap<>();
+        mapExp.put(customerExample2.getEmail(),customerExample2);
+        mapExp.put(customerExample3.getEmail(),customerExample3);
+        mapExp.put(customerExample1.getEmail(),customerExample1);
+        for(var custKey : mapExp.keySet())
+            System.out.println(custKey);
+
+        System.out.println(mapExp.get("b3"));
     }
 
     //Upcasting Down-casting
