@@ -7,10 +7,7 @@ import com.javabasics.exceptions.ExceptionDemo;
 import com.javabasics.generics.GenericList;
 import com.javabasics.generics.User;
 import com.javabasics.generics.UserList;
-import com.javabasics.lamdas.ConsolePrinter;
-import com.javabasics.lamdas.ConsumerDemo;
-import com.javabasics.lamdas.LamdaDemo;
-import com.javabasics.lamdas.SupplierDemo;
+import com.javabasics.lamdas.*;
 
 import java.util.*;
 
@@ -130,6 +127,9 @@ public class Main {
 
         var supplier = new SupplierDemo();
         supplier.show();
+
+        var func = new FunctionalDemo();
+        func.show();
     }
 
     //Upcasting Down-casting
