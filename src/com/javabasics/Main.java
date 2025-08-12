@@ -8,6 +8,7 @@ import com.javabasics.generics.GenericList;
 import com.javabasics.generics.User;
 import com.javabasics.generics.UserList;
 import com.javabasics.lamdas.ConsolePrinter;
+import com.javabasics.lamdas.ConsumerDemo;
 import com.javabasics.lamdas.LamdaDemo;
 
 import java.util.*;
@@ -122,6 +123,9 @@ public class Main {
 
         var lamdaDemo = new LamdaDemo();
         lamdaDemo.show();
+
+        var consumerFn = new ConsumerDemo();
+        consumerFn.showConsumer();
     }
 
     //Upcasting Down-casting
