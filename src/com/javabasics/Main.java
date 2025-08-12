@@ -130,6 +130,9 @@ public class Main {
 
         var func = new FunctionalDemo();
         func.show();
+
+        var pred = new PredicateDemo();
+        pred.show();
     }
 
     //Upcasting Down-casting
