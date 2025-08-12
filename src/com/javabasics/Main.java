@@ -7,6 +7,8 @@ import com.javabasics.exceptions.ExceptionDemo;
 import com.javabasics.generics.GenericList;
 import com.javabasics.generics.User;
 import com.javabasics.generics.UserList;
+import com.javabasics.lamdas.ConsolePrinter;
+import com.javabasics.lamdas.LamdaDemo;
 
 import java.util.*;
 
@@ -117,6 +119,9 @@ public class Main {
             System.out.println(custKey);
 
         System.out.println(mapExp.get("b3"));
+
+        var lamdaDemo = new LamdaDemo();
+        lamdaDemo.show();
     }
 
     //Upcasting Down-casting
