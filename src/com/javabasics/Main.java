@@ -8,6 +8,7 @@ import com.javabasics.generics.GenericList;
 import com.javabasics.generics.User;
 import com.javabasics.generics.UserList;
 import com.javabasics.lamdas.*;
+import com.javabasics.streams.StreamsDemo;
 
 import java.util.*;
 
@@ -133,6 +134,9 @@ public class Main {
 
         var pred = new PredicateDemo();
         pred.show();
+
+        var strream = new StreamsDemo();
+        strream.showStream();
     }
 
     //Upcasting Down-casting
