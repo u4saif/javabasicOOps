@@ -16,9 +16,9 @@ public class StreamsDemo {
         Stream.iterate(2,n->n+1).peek((n)-> System.out.println("peek : "+ n)).limit(10).forEach(num-> System.out.println(num));
 
 
-        var moviesList = List.of(new Movie("DDLJ",5),
-                new Movie("FFive",3),
-                new Movie("3Ideots",2));
+        var moviesList = List.of(new Movie("DDLJ",5,Genre.ACTION),
+                new Movie("FFive",3,Genre.COMEDY),
+                new Movie("3Ideots",2,Genre.ACTION));
 
 //        moviesList
 //                .stream()
@@ -47,13 +47,27 @@ public class StreamsDemo {
                 .reduce(Integer::sum);
         System.out.println("Toal likes: " + totalLikes.get());
  */
-        var sampleList = moviesList.stream().collect(Collectors.toList());
-        var sampleset = moviesList.stream().collect(Collectors.toSet());
-        var samplemap = moviesList.stream().collect(Collectors.toMap(m->m.getTitle(),m->m.getTotalLikes()));
-        var sampleSumarization = moviesList.stream().collect(Collectors.summarizingInt(m->m.getTotalLikes()));
-        System.out.println(sampleList);
-        System.out.println(sampleset);
-        System.out.println(samplemap);
-        System.out.println(sampleSumarization);
+//        var sampleList = moviesList.stream().collect(Collectors.toList());
+//        var sampleset = moviesList.stream().collect(Collectors.toSet());
+//        var samplemap = moviesList.stream().collect(Collectors.toMap(m->m.getTitle(),m->m.getTotalLikes()));
+//        var sampleSumarization = moviesList.stream().collect(Collectors.summarizingInt(m->m.getTotalLikes()));
+//        System.out.println(sampleList);
+//        System.out.println(sampleset);
+//        System.out.println(samplemap);
+//        System.out.println(sampleSumarization);
+
+//        var sampleGroup = moviesList.stream().collect(Collectors.groupingBy(m->m.getGenre()));
+//        System.out.println(sampleGroup);
+
+        var sampleGroup =
+                moviesList
+                        .stream()
+                        .collect(Collectors
+                                .groupingBy(Movie::getGenre,
+                                        Collectors
+                                        .mapping(Movie::getTitle,
+                                                Collectors
+                                                        .joining(";"))));
+        System.out.println(sampleGroup);
     }
 }

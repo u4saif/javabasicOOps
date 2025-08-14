@@ -5,6 +5,12 @@ public class Movie {
     private String title;
     private int totalLikes;
 
+    public Genre getGenre() {
+        return genre;
+    }
+
+    private  Genre genre;
+
     public String getTitle() {
         return title;
     }
@@ -22,9 +28,10 @@ public class Movie {
     }
 
 
-    public Movie(String title, int totalLikes) {
+    public Movie(String title, int totalLikes,Genre genre) {
         this.title = title;
         this.totalLikes = totalLikes;
+        this.genre = genre;
     }
 
     @Override
