@@ -4,6 +4,7 @@ import com.javabasics.collection.CollectionDemo;
 import com.javabasics.collection.Customer;
 import com.javabasics.collection.EmailComparator;
 import com.javabasics.concurency.ConcurrencyDemo;
+import com.javabasics.concurency.ThreadDemo;
 import com.javabasics.exceptions.ExceptionDemo;
 import com.javabasics.generics.GenericList;
 import com.javabasics.generics.User;
@@ -141,6 +142,9 @@ public class Main {
 
         var thread = new ConcurrencyDemo();
         thread.show();
+
+        var concur = new ThreadDemo();
+        concur.show();
     }
 
     //Upcasting Down-casting

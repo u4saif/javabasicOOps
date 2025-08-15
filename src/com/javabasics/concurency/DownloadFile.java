@@ -2,6 +2,12 @@ package com.javabasics.concurency;
 
 public class DownloadFile implements Runnable{
 
+    private  DownloadStatus status;
+
+    public DownloadFile(DownloadStatus status) {
+        this.status = status;
+    }
+
     @Override
     public void run() {
         System.out.println("Download Thread Name: " + Thread.currentThread().getName());
@@ -12,9 +18,10 @@ public class DownloadFile implements Runnable{
 //        }
         System.out.println("Download complete " + Thread.currentThread().getName());
 
-        for (var i=1; i<=Integer.MAX_VALUE;i++){
+        for (var i=1; i<=10_000;i++){
             if(Thread.interrupted()) break;
-            System.out.println("Downloaded bytes: " + i);
+            status.increment();
+//            System.out.println("Downloaded bytes: " + i);
 
         }
     }
