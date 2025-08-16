@@ -4,8 +4,8 @@ public class DownloadFile implements Runnable{
 
     private  DownloadStatus status;
 
-    public DownloadFile(DownloadStatus status) {
-        this.status = status;
+    public DownloadFile() {
+        this.status = new DownloadStatus();
     }
 
     @Override
@@ -24,5 +24,9 @@ public class DownloadFile implements Runnable{
 //            System.out.println("Downloaded bytes: " + i);
 
         }
+    }
+
+    public DownloadStatus getStatus() {
+        return status;
     }
 }

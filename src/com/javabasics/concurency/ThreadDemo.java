@@ -5,14 +5,17 @@ import java.util.List;
 
 public class ThreadDemo {
 
-    public void show(){
-        var statusDownload = new DownloadStatus();
 
+    public void show(){
+        List<DownloadFile> downloadFileList = new ArrayList<>();
         List<Thread> threads = new ArrayList<>();
         for(var i=0;i<10;i++){
-        Thread thread = new Thread(new DownloadFile(statusDownload));
-        thread.start();
-        threads.add(thread);
+            var task = new DownloadFile();
+            downloadFileList.add(task);
+
+            Thread thread = new Thread(task);
+            thread.start();
+            threads.add(thread);
         }
 
         for (var thread:threads){
@@ -23,7 +26,10 @@ public class ThreadDemo {
             }
         }
 
-        System.out.println("Toal Bytes downlaoded: "+ statusDownload.getTotalBytes());
+        var toralBytes = downloadFileList.stream()
+                        .map(t->t.getStatus().getTotalBytes())
+                                .reduce(Integer::sum);
+        System.out.println("Toal Bytes downlaoded: "+ toralBytes);
 
 
     }
