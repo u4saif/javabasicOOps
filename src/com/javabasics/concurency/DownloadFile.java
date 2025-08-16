@@ -1,9 +1,11 @@
 package com.javabasics.concurency;
 
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 public class DownloadFile implements Runnable{
 
     private  DownloadStatus status;
-
     public DownloadFile() {
         this.status = new DownloadStatus();
     }
